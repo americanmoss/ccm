@@ -1,0 +1,180 @@
+// Foundation Variables
+
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700');
+$header-font-family: "Open Sans", sans-serif !default;
+$header-font-weight: bold;
+$paragraph-font-family: "Open Sans", sans-serif !default;
+$topbar-link-font-family: "Open Sans", sans-serif !default;
+$button-font-family:  "Open Sans", sans-serif !default;
+$input-font-family: "Open Sans", sans-serif !default;
+$button-font-weight: bold;
+$topbar-link-weight: bold;
+$topbar-title-weight: bold;
+$column-gutter: rem-calc(0);
+$primary-color: #2D3140 !default;
+$topbar-height: 75px;
+$blue: #2D3140;
+
+
+// Import framework
+@import "foundation";
+@import 'foundation-icons';
+
+form { font-family: "Open Sans", sans-serif !important; }
+.form-item { display:inline-block; }
+.field_with_errors { display: inline; }
+.alert-box {
+	text-align:center;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+	div.desktop-nav {
+		-webkit-box-shadow: 0 4px 4px -2px $blue;
+		-moz-box-shadow: 0 4px 4px -2px $blue;
+		box-shadow: 0 4px 4px -2px $blue;
+		
+	}
+
+	div.desktop-nav nav.top-bar	{
+		background:white !important;
+	}
+
+	div.desktop-nav nav.top-bar a {
+		background:white !important;
+	}
+
+	div.desktop-nav .title-area {
+		float:none;
+		position:absolute;
+		z-index:99;
+		left:50%;
+		margin-left:-45.6px;
+	}
+
+	div.desktop-nav li.name img {
+		height:75px;
+	}
+
+	div.desktop-nav li {
+		display:inline-block;
+		position:relative;
+	}
+
+	div.desktop-nav li a {
+		font-size: rem-calc(20);
+		text-transform:uppercase;
+		color: $primary-color;
+	}
+
+	div.desktop-nav ul.right li a {
+		font-size: rem-calc(30);
+	}
+
+	div.desktop-nav li.active > a {
+		color: $primary-color !important;
+		background: white;
+	}
+
+	div.desktop-nav li:hover > a {
+		color: $primary-color !important;
+		background: white;
+	}
+
+	div.desktop-nav li a:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width:0;
+		height:5px;
+		background: $blue;
+		-webkit-transition: width .4s;
+		-moz-transition: width .4s;
+		-ms-transition: width .4s;
+		-o-transition: width .4s;
+		transition: width .4s
+	}
+
+	div.desktop-nav li a:hover:before {
+		width: 100%;
+	}
+
+	div.desktop-nav li.active a:before {
+		width: 100%;
+	}
+}
+
+.row {
+	margin:0;
+	width:100%;
+	max-width:100rem;
+}
+
+.splash-baltimore {
+	background-image: url('../images/baltimore.jpg');
+	background-repeat:no-repeat;
+	background-position: center center;
+	height:650px;
+	background-size:cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+div.overlay-first {
+	padding-top:100px;
+}
+
+div.overlay h2 {
+	padding:10px;
+	background: rgba(45, 49, 64, 0.9) !important;
+	color:white !important;
+	text-transform:uppercase !important;
+}
+
+div.overlay h3 {
+	padding:10px;
+	margin-top:100px;
+	background: rgba(45, 49, 64, 0.9) !important;
+	color:white !important;
+	text-transform:uppercase !important;
+}
+
+div.overlay h5 {
+	margin-top:100px;
+	padding:30px;
+	background: rgba(45, 49, 64, 0.9) !important;
+	color:white !important;
+	text-align: center;
+}
+
+.esl {
+	padding:40px 10px;
+}
+
+.esl p {
+	text-align: justify;
+	padding:10px;
+}
+
+.splash-sails {
+	background-image: url('../images/sails.jpg');
+	background-repeat:no-repeat;
+	background-position: center center;
+	height:600px;
+	background-size:cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+.copy {
+	padding-top:50px;
+}
+
+.t {
+	height:500px;
+}

@@ -1,17 +1,32 @@
 source 'https://rubygems.org'
 
+ruby '2.1.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.7'
+gem 'rails', '4.0.5'
 
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
-	gem 'sqlite3'
+	gem 'sqlite3', '1.3.8'
 	# Rspec for testing
 	gem 'rspec-rails', '2.13.1'
+	# Rails layout for Foundation install
+	gem 'rails_layout'
+	# Factory girl for user generation
+	gem 'factory_girl_rails', '4.2.0'
 end
-	
+
+group :test do
+	gem 'selenium-webdriver', '2.35.1'
+	gem 'capybara', '2.1.0'
+end
+
 # Use SCSS for stylesheets
-gem 'sass-rails', '4.0.1'
+gem 'sass-rails', '~> 4.0.2'
+
+# Use Foundation as frontend framework
+gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.1.1'
@@ -31,8 +46,12 @@ gem 'turbolinks', '1.1.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '1.0.2'
 
+# Use database tables for display
+gem 'jquery-ui-rails'
+gem 'jquery-datatables-rails', '~> 2.1.10.0.0'
+
 group :doc do
-  	# bundle exec rake doc:rails generates the API under doc/api.
+	# bundle exec rake doc:rails generates the API under doc/api.
 	gem 'sdoc', '0.3.20', require: false
 end
 
@@ -42,7 +61,7 @@ group :production do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
