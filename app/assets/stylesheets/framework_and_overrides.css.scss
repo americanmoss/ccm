@@ -13,6 +13,7 @@ $topbar-title-weight: bold;
 $column-gutter: rem-calc(0);
 $primary-color: #2D3140 !default;
 $topbar-height: 75px;
+
 $blue: #2D3140;
 
 
@@ -48,7 +49,7 @@ form { font-family: "Open Sans", sans-serif !important; }
 	div.desktop-nav .title-area {
 		float:none;
 		position:absolute;
-		z-index:99;
+		z-index:1;
 		left:50%;
 		margin-left:-45.6px;
 	}
@@ -160,6 +161,10 @@ div.overlay h5 {
 	padding:10px;
 }
 
+.esl h2 {
+	padding-top:10px;
+}
+
 .splash-sails {
 	background-image: url('../images/sails.jpg');
 	background-repeat:no-repeat;
@@ -171,8 +176,16 @@ div.overlay h5 {
 	-o-background-size: cover;
 }
 
+.splash-sails .button {
+	margin-top:100px;
+}
+
 .copy {
 	padding-top:50px;
+}
+
+.footer {
+	border-top: 1px $blue;
 }
 
 .t {
