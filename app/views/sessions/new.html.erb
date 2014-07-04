@@ -1,0 +1,16 @@
+<div class="row">
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<div class="small-centered large-4 columns text-center">
+		<% if signed_in? %>
+			<%= link_to "SIGN OUT", signout_path, method: "delete", class: "button" %>
+		<% else %>
+			<h1 class="text-left">SIGN IN</h1>
+			<%= form_for(:session, url: sessions_path) do |f| %>
+				<%= f.text_field :email, placeholder:"Email" %>
+				<%= f.password_field :password, placeholder:"Password" %>
+
+				<%= f.submit "SIGN IN", class: "button" %>
+			<% end %>
+		<% end %>
+	</div>
+</div>

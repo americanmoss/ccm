@@ -1,0 +1,12 @@
+<div class="row">
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<div class="small-centered large-4 columns text-center">
+		<h1>BACKEND DATA</h1>
+		<p>There are currently <%= User.count %> subscribers. To download the data, please choose one of the options below</p>
+		<ul class="button-group even-3">
+			<li><%= link_to "XLS", subscribers_path(format: "xls"), class: "button" %></li>
+			<li><a class="button secondary disabled">Or</a></li>
+			<li><%= link_to "CSV", subscribers_path(format: "csv"), class: "button" %></li>
+		</ul>
+	</div>
+</div>
