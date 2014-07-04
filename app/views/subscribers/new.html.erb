@@ -81,11 +81,8 @@
 	<h1>LEARN MORE</h1>
 	<p>Sign up here and you’ll be first to know about new vendors and workshops.</p>
 	<%= form_for(@subscriber) do |f| %>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-
-		<%= f.label :email %>
-		<%= f.text_field :email %>
+		<%= f.text_field :name, placeholder:"Name" %>
+		<%= f.text_field :email, placeholder:"Email" %>
 
 		 <%= f.submit "Sign Up", class: "button" %>
 	<% end %>
