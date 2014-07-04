@@ -184,10 +184,11 @@ div.overlay h5 {
 	padding-top:50px;
 }
 
-.footer {
-	border-top: 1px $blue;
+.alert-box {
+	margin-bottom:0;
 }
 
-.t {
-	height:500px;
+.alert-box.error {
+	background:#EB3F34;
+	border: #EB3F34;
 }
