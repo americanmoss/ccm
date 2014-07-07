@@ -5,14 +5,14 @@ class SubscribersController < ApplicationController
 	end
 
 	def create 
-		@subscriber = subscriber.new(subscriber_params)
-	if @subscriber.save
-		flash[:success] = "Thank you for signing up"
-		redirect_to root_url
-			else
-		render 'new'
-		flash[:error] = "Please enter a valid email address"
-			end
+		@subscriber = Subscriber.new(subscriber_params)
+		if @subscriber.save
+			flash[:success] = "Thank you for signing up"
+			redirect_to root_url
+		else
+			render 'new'
+			flash[:error] = "Please enter a valid email address"
+		end
 	end 
 
 	def index
@@ -43,7 +43,7 @@ class SubscribersController < ApplicationController
 	private
 
 	def subscriber_params
-	params.require(:subscriber).permit(:name, :email)
+		params.require(:subscriber).permit(:name, :email)
 	end
 
 end
