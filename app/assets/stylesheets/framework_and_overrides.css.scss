@@ -43,7 +43,7 @@ form { font-family: "Open Sans", sans-serif !important; }
 
 @media only screen and (min-width: 768px) {
 	[data-magellan-expedition], [data-magellan-expedition-clone] {
-		background:$white;
+		background:white;
 	}
 
 	div.desktop-nav {
@@ -52,11 +52,11 @@ form { font-family: "Open Sans", sans-serif !important; }
 	}
 
 	div.desktop-nav nav.top-bar	{
-		background:$white !important;
+		background:white !important;
 	}
 
 	div.desktop-nav nav.top-bar a {
-		background:$white !important;
+		background:white !important;
 		font-weight:normal;
 		font-style:italic;
 	}
