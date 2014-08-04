@@ -145,6 +145,22 @@ form { font-family: "Open Sans", sans-serif !important; }
 	-o-background-size: cover;
 }
 
+.light h1 {
+	color: $black;
+	padding-top: rem-calc(20);
+	font-family: "Josefin Sans";
+	font-size: rem-calc(60);
+	font-weight:normal;
+}
+
+.light h4 {
+	color: $black;
+	font-weight:300;
+	font-style: italic;
+	font-size: rem-calc(25);
+	padding-bottom:rem-calc(20);
+}
+
 div .dark {
 	background-color: $black;
 	color: $white;
