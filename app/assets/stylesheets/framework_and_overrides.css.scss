@@ -3,15 +3,16 @@
 @import url('//fonts.googleapis.com/css?family=Open+Sans:400italic,300italic,700');
 @import url('//fonts.googleapis.com/css?family=Josefin+Sans:300,700');
 $header-font-family: "Open Sans", sans-serif !default;
-$header-font-weight: bold;
+$header-font-weight: normal;
 $paragraph-font-family: "Open Sans", sans-serif !default;
 $topbar-link-font-family: "Open Sans", sans-serif !default;
 $button-font-family:  "Open Sans", sans-serif !default;
 $input-font-family: "Open Sans", sans-serif !default;
-$button-font-weight: bold;
-$topbar-link-weight: bold;
+$button-font-weight: normal;
+$topbar-link-weight: normal;
 $topbar-title-weight: bold;
-$topbar-bg: #131618;
+$topbar-height: 55px;
+$topbar-bg: #DFE1E0;
 $column-gutter: rem-calc(0);
 $primary-color: #131618 !default;
 $header-font-color: $primary-color;
@@ -39,32 +40,25 @@ form { font-family: "Open Sans", sans-serif !important; }
 	text-transform:uppercase;
 }
 
+
 @media only screen and (min-width: 768px) {
+	[data-magellan-expedition], [data-magellan-expedition-clone] {
+		background:$white;
+	}
+
 	div.desktop-nav {
-		-webkit-box-shadow: 0 4px 4px -2px $black;
-		-moz-box-shadow: 0 4px 4px -2px $black;
-		box-shadow: 0 4px 4px -2px $black;
-		
+		padding-top:0;
+		padding-bottom:0;
 	}
 
 	div.desktop-nav nav.top-bar	{
-		background:white !important;
+		background:$white !important;
 	}
 
 	div.desktop-nav nav.top-bar a {
-		background:white !important;
-	}
-
-	div.desktop-nav .title-area {
-		float:none;
-		position:absolute;
-		z-index:1;
-		left:50%;
-		margin-left:-45.6px;
-	}
-
-	div.desktop-nav li.name img {
-		height:75px;
+		background:$white !important;
+		font-weight:normal;
+		font-style:italic;
 	}
 
 	div.desktop-nav li {
@@ -96,9 +90,9 @@ form { font-family: "Open Sans", sans-serif !important; }
 		content: '';
 		display: block;
 		position: absolute;
-		left: 0;
+		left: 10%;
 		bottom: 0;
-		width:100%;
+		width:80%;
 		height:0px;
 		background: $black;
 		-webkit-transition: height .4s;
@@ -109,11 +103,11 @@ form { font-family: "Open Sans", sans-serif !important; }
 	}
 
 	div.desktop-nav li a:hover:before {
-		height: 5px;
+		height: 3px;
 	}
 
 	div.desktop-nav li.active a:before {
-		height: 5px;
+		height: 3px;
 	}
 }
 
@@ -238,7 +232,7 @@ input {
 	font-style:italic;
 }
 
-.button,dark {
+.button.dark {
 	background-color: $black;
 	border: 2px solid $white;
 	width:rem-calc(300);
@@ -252,6 +246,20 @@ input {
 	color:$black;
 }
 
+.button.dark.action {
+	background-color: $black;
+	border: 2px solid $red;
+	color:$red;
+	width:rem-calc(300);
+	font-weight:normal;
+}
+
+.button.dark.action:hover {
+	background-color: $red;
+	border: 2px solid $black;
+	color:$black;
+}
+
 .esl {
 	padding:40px 10px 10px 10px;
 }
@@ -259,7 +267,8 @@ input {
 .esl h1 {
 	padding-top:30px;
 	font-family: "Josefin Sans";
-	font-size: rem-calc(60);
+	font-size: rem-calc(70);
+	font-weight:bold;
 }
 
 .esl h1.eat {
@@ -275,13 +284,10 @@ input {
 }
 
 .esl p {
+	font-size: rem-calc(18);
 	text-align: justify;
 	font-style:italic;
 	padding:10px;
-}
-
-.esl h2 {
-	padding-top:10px;
 }
 
 div .press {
