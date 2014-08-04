@@ -213,17 +213,22 @@ input.button {
 	background-color:white;
 } 
 
+input {
+	font-weight: normal;
+	font-style:italic;
+}
+
 ::-webkit-input-placeholder {
 	font-weight: normal;
 	font-style:italic;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder {
 	font-weight: normal;
 	font-style:italic;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder {
 	font-weight: normal;
 	font-style:italic;
 }
