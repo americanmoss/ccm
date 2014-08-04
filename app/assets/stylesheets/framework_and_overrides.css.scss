@@ -165,6 +165,19 @@ div .dark {
 	font-size: rem-calc(25);
 }
 
+.dark h4 a {
+	color:grey;
+	-webkit-transition: color .4s;
+	-moz-transition: color .4s;
+	-ms-transition: color .4s;
+	-o-transition: color .4s;
+	transition: color .4s
+}
+
+.dark h4 a:hover {
+	color:$white;
+}
+
 .reveal-modal h1 {
 	font-family: "Josefin Sans";
 	font-size: rem-calc(60);
@@ -248,32 +261,26 @@ input.button {
 	padding-top:10px;
 }
 
-div .huff {
-	height:79px !important; 
+div .press {
+	height:210px !important;
 }
 
 #huffpo {
-	width:800px !important;
-	height:79px !important;
+	width:400px !important;
+	height:200px !important;
 	display: inline-block !important;
-	float: left !important;
 	background-repeat: no-repeat;
 	background-image: url(../images/huffpo_sprite.png);
 }
 
 #huffpo:hover {
-	background-position:-800px;
-}
-
-div .press {
-	height:210px !important;
+	background-position:-400px;
 }
 
 #vfa {
 	width:400px !important;
 	height:200px !important;
 	display: inline-block !important;
-	float: left !important;
 	background-repeat: no-repeat;
 	background-image: url(../images/vfa_sprite.png);
 }
@@ -286,7 +293,6 @@ div .press {
 	width:400px !important;
 	height:200px !important;
 	display: inline-block !important;
-	float: left !important;
 	background-repeat: no-repeat;
 	background-image: url(../images/technically_sprite.png);
 }
