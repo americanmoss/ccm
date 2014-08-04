@@ -1,6 +1,7 @@
 // Foundation Variables
 
-@import url('//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400italic,300italic,700');
+@import url('//fonts.googleapis.com/css?family=Josefin+Sans:300,700');
 $header-font-family: "Open Sans", sans-serif !default;
 $header-font-weight: bold;
 $paragraph-font-family: "Open Sans", sans-serif !default;
@@ -10,12 +11,19 @@ $input-font-family: "Open Sans", sans-serif !default;
 $button-font-weight: bold;
 $topbar-link-weight: bold;
 $topbar-title-weight: bold;
+$topbar-bg: #131618;
 $column-gutter: rem-calc(0);
-$primary-color: #2D3140 !default;
+$primary-color: #131618 !default;
 $header-font-color: $primary-color;
-$topbar-height: 75px;
 
-$blue: #2D3140;
+$reveal-default-width: 50%;
+$reveal-overlay-bg: rgba(#000, .75);
+
+$black: #131618;
+$white: #DFE1E0;
+$green: #476E45;
+$yellow: #D39F43;
+$red: #BF4846;
 
 
 // Import framework
@@ -33,9 +41,9 @@ form { font-family: "Open Sans", sans-serif !important; }
 
 @media only screen and (min-width: 768px) {
 	div.desktop-nav {
-		-webkit-box-shadow: 0 4px 4px -2px $blue;
-		-moz-box-shadow: 0 4px 4px -2px $blue;
-		box-shadow: 0 4px 4px -2px $blue;
+		-webkit-box-shadow: 0 4px 4px -2px $black;
+		-moz-box-shadow: 0 4px 4px -2px $black;
+		box-shadow: 0 4px 4px -2px $black;
 		
 	}
 
@@ -90,75 +98,149 @@ form { font-family: "Open Sans", sans-serif !important; }
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		width:0;
-		height:5px;
-		background: $blue;
-		-webkit-transition: width .4s;
-		-moz-transition: width .4s;
-		-ms-transition: width .4s;
-		-o-transition: width .4s;
-		transition: width .4s
+		width:100%;
+		height:0px;
+		background: $black;
+		-webkit-transition: height .4s;
+		-moz-transition: height .4s;
+		-ms-transition: height .4s;
+		-o-transition: height .4s;
+		transition: height .4s
 	}
 
 	div.desktop-nav li a:hover:before {
-		width: 100%;
+		height: 5px;
 	}
 
 	div.desktop-nav li.active a:before {
-		width: 100%;
+		height: 5px;
 	}
 }
 
 .row {
 	margin:0;
 	width:100%;
-	max-width:100rem;
+	max-width:1600px;
 }
 
-.splash-baltimore {
-	background-image: url('../images/baltimore.jpg');
+.splash-ingredients {
+	background-image: url('../images/ingredients_with_logo.jpg');
 	background-repeat:no-repeat;
 	background-position: center center;
-	height:650px;
+	height:746px;
 	background-size:cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 }
 
-div.overlay-first {
-	padding-top:100px;
+.splash-sandwich {
+	background-image: url('../images/sandwich.jpg');
+	background-repeat:no-repeat;
+	background-position: center center;
+	height:400px;
+	background-size:cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 }
 
-div.overlay h2 {
-	padding:10px;
-	background: rgba(45, 49, 64, 0.9) !important;
-	color:white !important;
-	text-transform:uppercase !important;
+div .dark {
+	background-color: $black;
+	color: $white;
 }
 
-div.overlay h3 {
-	padding:10px;
-	margin-top:100px;
-	background: rgba(45, 49, 64, 0.9) !important;
-	color:white !important;
-	text-transform:uppercase !important;
+.dark h1 {
+	color: $white;
+	padding-top: rem-calc(20);
+	font-family: "Josefin Sans";
+	font-size: rem-calc(60);
+	font-weight:normal;
 }
 
-div.overlay h5 {
-	margin-top:100px;
-	padding:30px;
-	background: rgba(45, 49, 64, 0.9) !important;
-	color:white !important;
-	text-align: center;
+.dark h4 {
+	color: $white;
+	font-weight:300;
+	font-style: italic;
+	font-size: rem-calc(25);
+}
+
+.reveal-modal h1 {
+	font-family: "Josefin Sans";
+	font-size: rem-calc(60);
+	font-weight:normal;
+}
+
+.reveal-modal h4 {
+	font-weight:300;
+	font-style: italic;
+	font-size: rem-calc(25);
+	padding-bottom:rem-calc(20);
+}
+
+input.button {
+	color:$black;
+	border:2px solid $black;
+	background-color:white;
+} 
+
+::-webkit-input-placeholder {
+	font-weight: normal;
+	font-style:italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	font-weight: normal;
+	font-style:italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	font-weight: normal;
+	font-style:italic;
+}
+
+:-ms-input-placeholder {  
+	font-weight: normal;
+	font-style:italic;
+}
+
+.button,dark {
+	background-color: $black;
+	border: 2px solid $white;
+	width:rem-calc(300);
+}
+
+.button.dark:hover {
+	background-color: $white;
+	border: 2px solid $black;
+	color:$black;
 }
 
 .esl {
-	padding:40px 10px;
+	padding:40px 10px 10px 10px;
+}
+
+.esl h1 {
+	padding-top:30px;
+	font-family: "Josefin Sans";
+	font-size: rem-calc(60);
+}
+
+.esl h1.eat {
+	color:$green;
+}
+
+.esl h1.shop {
+	color:$yellow;
+}
+
+.esl h1.learn {
+	color:$red;
 }
 
 .esl p {
 	text-align: justify;
+	font-style:italic;
 	padding:10px;
 }
 
@@ -166,23 +248,51 @@ div.overlay h5 {
 	padding-top:10px;
 }
 
-.splash-sails {
-	background-image: url('../images/sails.jpg');
-	background-repeat:no-repeat;
-	background-position: center center;
-	height:600px;
-	background-size:cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+div .huff {
+	height:79px !important; 
 }
 
-.splash-sails .button {
-	margin-top:100px;
+#huffpo {
+	width:800px !important;
+	height:79px !important;
+	display: inline-block !important;
+	float: left !important;
+	background-repeat: no-repeat;
+	background-image: url(../images/huffpo_sprite.png);
 }
 
-.copy {
-	padding-top:50px;
+#huffpo:hover {
+	background-position:-800px;
+}
+
+div .press {
+	height:210px !important;
+}
+
+#vfa {
+	width:400px !important;
+	height:200px !important;
+	display: inline-block !important;
+	float: left !important;
+	background-repeat: no-repeat;
+	background-image: url(../images/vfa_sprite.png);
+}
+
+#vfa:hover {
+	background-position:-400px;
+}
+
+#technically {
+	width:400px !important;
+	height:200px !important;
+	display: inline-block !important;
+	float: left !important;
+	background-repeat: no-repeat;
+	background-image: url(../images/technically_sprite.png);
+}
+
+#technically:hover {
+	background-position:-400px;
 }
 
 .alert-box {

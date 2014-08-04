@@ -2,7 +2,7 @@ Ccm::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :subscribers
-  root to: 'subscribers#new'
+  root to: 'static_pages#home'
   match '/backend', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
   # The priority is based upon order of creation: first created -> highest priority.
