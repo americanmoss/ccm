@@ -12,8 +12,8 @@ class SubscribersController < ApplicationController
 			flash[:success] = "Thank you for signing up"
 			redirect_to root_url
 		else
-			render 'new'
 			flash[:error] = "Please enter a valid email address"
+			redirect_to root_url
 		end
 	end 
 
