@@ -232,6 +232,10 @@ input {
 	font-style:italic;
 }
 
+.button.dark i {
+	font-size:rem-calc(20);
+}
+
 .button.dark {
 	background-color: $black;
 	border: 2px solid $white;
@@ -246,7 +250,7 @@ input {
 	color:$black;
 }
 
-.button.dark.action {
+.button.dark.red {
 	background-color: $black;
 	border: 2px solid $red;
 	color:$red;
@@ -254,8 +258,36 @@ input {
 	font-weight:normal;
 }
 
-.button.dark.action:hover {
+.button.dark.red:hover {
 	background-color: $red;
+	border: 2px solid $black;
+	color:$black;
+}
+
+.button.dark.green {
+	background-color: $black;
+	border: 2px solid $green;
+	color:$green;
+	width:rem-calc(300);
+	font-weight:normal;
+}
+
+.button.dark.green:hover {
+	background-color: $green;
+	border: 2px solid $black;
+	color:$black;
+}
+
+.button.dark.yellow {
+	background-color: $black;
+	border: 2px solid $yellow;
+	color:$yellow;
+	width:rem-calc(300);
+	font-weight:normal;
+}
+
+.button.dark.yellow:hover {
+	background-color: $yellow;
 	border: 2px solid $black;
 	color:$black;
 }
@@ -276,11 +308,11 @@ input {
 }
 
 .esl h1.shop {
-	color:$yellow;
+	color:$red;
 }
 
 .esl h1.learn {
-	color:$red;
+	color:$yellow;
 }
 
 .esl p {
