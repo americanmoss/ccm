@@ -242,6 +242,8 @@ input {
 	background-color: $black;
 	border: 2px solid $white;
 	width:rem-calc(300);
+	font-weight:normal;
+	font-style:italic;
 }
 
 .button.dark:hover {
