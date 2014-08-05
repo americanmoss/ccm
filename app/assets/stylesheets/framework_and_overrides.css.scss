@@ -39,7 +39,12 @@ form { font-family: "Open Sans", sans-serif !important; }
 	font-weight:bold;
 	text-transform:uppercase;
 }
+
 div {
+	max-width:2000px;
+}
+
+div.row {
 	max-width:2000px;
 }
 
@@ -121,14 +126,50 @@ div {
 }
 
 .splash-ingredients {
-	background-image: url('../images/ingredients_with_logo.jpg');
+	background-image: url('../images/ingredients_without_logo.jpg');
 	background-repeat:no-repeat;
 	background-position: center center;
-	height:746px;
+	height:650px;
 	background-size:cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
+}
+
+.logo {
+	position:relative;
+	padding-top:100px;
+}
+
+.button.light {
+	margin-top:50px;
+	background-color: $black;
+	border: 0;
+	width:100%;
+	font-weight:normal;
+	font-style:italic;
+	font-size:rem-calc(20);
+}
+
+.button.light:hover {
+	background-color: $white;
+	border: 0;
+	color:$black;
+}
+
+.button.light-body {
+	margin-top:25px;
+	background-color: $black;
+	border: 2px solid $white;
+	width:rem-calc(300);
+	font-weight:normal;
+	font-style:italic;
+}
+
+.button.light-body:hover {
+	background-color: $white;
+	border: 2px solid $black;
+	color:$black;
 }
 
 .splash-sandwich {
@@ -154,7 +195,7 @@ div {
 	color: $black;
 	font-weight:300;
 	font-style: italic;
-	font-size: rem-calc(25);
+	font-size: rem-calc(22);
 	padding-bottom:rem-calc(20);
 }
 
@@ -175,7 +216,7 @@ div .dark {
 	color: $white;
 	font-weight:300;
 	font-style: italic;
-	font-size: rem-calc(25);
+	font-size: rem-calc(22);
 }
 
 .dark h4 a {
@@ -327,6 +368,10 @@ input {
 
 div .press {
 	height:210px !important;
+}
+
+div .social {
+	height:110px !important;
 }
 
 #huffpo {
