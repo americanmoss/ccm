@@ -117,6 +117,103 @@ div.row {
 	div.desktop-nav li.active a:before {
 		height: 3px;
 	}
+
+	.splash-ingredients {
+		height:650px;
+	}
+
+	.splash-sandwich {
+		height:400px;
+	}
+
+	.dark h1 {
+		padding-top: rem-calc(20);
+		font-size: rem-calc(60);
+	}
+
+	.light h1 {
+		padding-top: rem-calc(20);
+		font-size: rem-calc(60);
+	}
+
+	.dark h4 {
+		font-size: rem-calc(22);
+	}
+
+	.light h4 {
+		font-size: rem-calc(22);
+	}
+	
+	.esl {
+		padding:40px 10px 10px 10px;
+	}
+
+	esl h1 {
+		padding-top:30px;
+		font-size: rem-calc(70);
+	}
+	.esl p {
+		font-size: rem-calc(18);
+		padding:10px;
+	}
+	div .press {
+		height:210px !important;
+	}
+	div .social {
+		height:110px !important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.splash-ingredients {
+		height:500px;
+	}
+
+	.splash-sandwich {
+		height:200px;
+	}
+
+	div.dark img {
+		padding-top:20px;
+	}
+
+	h1 {
+		font-size:rem-calc(20);
+	}
+
+	h4 {
+		font-size: rem-calc(15);
+		padding: 0 10px;
+	}
+
+	.dark h4 {
+		padding-bottom:20px;
+	}
+
+	.esl img {
+		width:150px;
+	}
+	.esl h1 {
+		font-size:rem-calc(28);
+		margin-bottom:3.2px;
+		padding-top:5px;
+	}
+	.esl img:first-of-type {
+		padding-top:20px;
+	}
+	.esl p {
+		font-size:rem-calc(15);
+		padding: 0 10px;
+	}
+	div .press {
+		height:610px !important;
+	}
+	div .social {
+		height:180px !important;
+	}
+	.light h1:first-of-type {
+		padding-top:20px;
+	}
 }
 
 .row {
@@ -129,7 +226,16 @@ div.row {
 	background-image: url('../images/ingredients_without_logo.jpg');
 	background-repeat:no-repeat;
 	background-position: center center;
-	height:650px;
+	background-size:cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+.splash-sandwich {
+	background-image: url('../images/sandwich.jpg');
+	background-repeat:no-repeat;
+	background-position: center center;
 	background-size:cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -141,13 +247,29 @@ div.row {
 	padding-top:100px;
 }
 
+h1 {
+	font-family: "Josefin Sans";
+	font-weight:normal;
+}
+
+h4 {
+	font-weight:300;
+	font-style: italic;
+}
+
+.button {
+	font-weight:normal;
+	font-style:italic;
+	width:rem-calc(300);
+	border-width:2px;
+	border-style:solid;
+}
+
 .button.light {
 	margin-top:50px;
 	background-color: $black;
 	border: 0;
 	width:100%;
-	font-weight:normal;
-	font-style:italic;
 	font-size:rem-calc(20);
 }
 
@@ -160,10 +282,7 @@ div.row {
 .button.light-body {
 	margin-top:25px;
 	background-color: $black;
-	border: 2px solid $white;
-	width:rem-calc(300);
-	font-weight:normal;
-	font-style:italic;
+	border-color: $white;
 }
 
 .button.light-body:hover {
@@ -172,30 +291,7 @@ div.row {
 	color:$black;
 }
 
-.splash-sandwich {
-	background-image: url('../images/sandwich.jpg');
-	background-repeat:no-repeat;
-	background-position: center center;
-	height:400px;
-	background-size:cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-}
-
-.light h1 {
-	color: $black;
-	padding-top: rem-calc(20);
-	font-family: "Josefin Sans";
-	font-size: rem-calc(60);
-	font-weight:normal;
-}
-
 .light h4 {
-	color: $black;
-	font-weight:300;
-	font-style: italic;
-	font-size: rem-calc(22);
 	padding-bottom:rem-calc(20);
 }
 
@@ -206,17 +302,10 @@ div .dark {
 
 .dark h1 {
 	color: $white;
-	padding-top: rem-calc(20);
-	font-family: "Josefin Sans";
-	font-size: rem-calc(60);
-	font-weight:normal;
 }
 
 .dark h4 {
 	color: $white;
-	font-weight:300;
-	font-style: italic;
-	font-size: rem-calc(22);
 }
 
 .dark h4 a {
@@ -233,21 +322,17 @@ div .dark {
 }
 
 .reveal-modal h1 {
-	font-family: "Josefin Sans";
 	font-size: rem-calc(60);
-	font-weight:normal;
 }
 
 .reveal-modal h4 {
-	font-weight:300;
-	font-style: italic;
 	font-size: rem-calc(25);
 	padding-bottom:rem-calc(20);
 }
 
 input.button {
 	color:$black;
-	border:2px solid $black;
+	border-color:$black;
 	background-color:white;
 } 
 
@@ -282,68 +367,52 @@ input {
 
 .button.dark {
 	background-color: $black;
-	border: 2px solid $white;
-	width:rem-calc(300);
-	font-weight:normal;
-	font-style:italic;
+	border-color:$white;
 }
 
 .button.dark:hover {
 	background-color: $white;
-	border: 2px solid $black;
+	border-color:$black;
 	color:$black;
 }
 
 .button.dark.red {
 	background-color: $black;
-	border: 2px solid $red;
+	border-color:$red;
 	color:$red;
-	width:rem-calc(300);
-	font-weight:normal;
 }
 
 .button.dark.red:hover {
 	background-color: $red;
-	border: 2px solid $black;
+	border-color:$black;
 	color:$black;
 }
 
 .button.dark.green {
 	background-color: $black;
-	border: 2px solid $green;
+	border-color:$green;
 	color:$green;
-	width:rem-calc(300);
-	font-weight:normal;
 }
 
 .button.dark.green:hover {
 	background-color: $green;
-	border: 2px solid $black;
+	border-color:$black;
 	color:$black;
 }
 
 .button.dark.yellow {
 	background-color: $black;
-	border: 2px solid $yellow;
+	border-color:$yellow;
 	color:$yellow;
-	width:rem-calc(300);
-	font-weight:normal;
 }
 
 .button.dark.yellow:hover {
 	background-color: $yellow;
-	border: 2px solid $black;
+	border-color:$black;
 	color:$black;
 }
 
-.esl {
-	padding:40px 10px 10px 10px;
-}
-
 .esl h1 {
-	padding-top:30px;
-	font-family: "Josefin Sans";
-	font-size: rem-calc(70);
 	font-weight:bold;
 }
 
@@ -360,54 +429,32 @@ input {
 }
 
 .esl p {
-	font-size: rem-calc(18);
 	text-align: justify;
 	font-style:italic;
-	padding:10px;
 }
 
-div .press {
-	height:210px !important;
+.press-logo {
+	width:400px !important;
+	height:200px !important;
+	display: inline-block !important;
+	background-repeat: no-repeat;
 }
 
-div .social {
-	height:110px !important;
+.press-logo:hover {
+	background-position:-400px;
 }
 
 #huffpo {
-	width:400px !important;
-	height:200px !important;
-	display: inline-block !important;
-	background-repeat: no-repeat;
+	
 	background-image: url(../images/huffpo_sprite.png);
 }
 
-#huffpo:hover {
-	background-position:-400px;
-}
-
 #vfa {
-	width:400px !important;
-	height:200px !important;
-	display: inline-block !important;
-	background-repeat: no-repeat;
 	background-image: url(../images/vfa_sprite.png);
 }
 
-#vfa:hover {
-	background-position:-400px;
-}
-
 #technically {
-	width:400px !important;
-	height:200px !important;
-	display: inline-block !important;
-	background-repeat: no-repeat;
 	background-image: url(../images/technically_sprite.png);
-}
-
-#technically:hover {
-	background-position:-400px;
 }
 
 .alert-box {
