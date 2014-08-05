@@ -365,6 +365,7 @@ div .dark {
 }
 
 input.button {
+	width:rem-calc(300);
 	color:$black;
 	border-color:$black;
 	background-color:white;
