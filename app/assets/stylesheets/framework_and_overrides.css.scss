@@ -162,6 +162,24 @@ div.row {
 	div .social {
 		height:110px !important;
 	}
+	.press-logo {
+		width:400px !important;
+		height:200px !important;
+	}
+	.press-logo:hover {
+		background-position:-400px;
+	}
+	#huffpo {
+		background-image: url(../images/huffpo_sprite.png);
+	}
+
+	#vfa {
+		background-image: url(../images/vfa_sprite.png);
+	}
+
+	#technically {
+		background-image: url(../images/technically_sprite.png);
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -206,13 +224,34 @@ div.row {
 		padding: 0 10px;
 	}
 	div .press {
-		height:610px !important;
+		height:330px !important;
 	}
 	div .social {
 		height:180px !important;
 	}
 	.light h1:first-of-type {
 		padding-top:20px;
+	}
+	.reveal-modal {
+		min-height:0;
+	}
+	.press-logo {
+		width:200px !important;
+		height:100px !important;
+	}
+	.press-logo:hover {
+		background-position:-200px;
+	}
+	#huffpo {
+		background-image: url(../images/huffpo_sprite_mobile.png);
+	}
+
+	#vfa {
+		background-image: url(../images/vfa_sprite_mobile.png);
+	}
+
+	#technically {
+		background-image: url(../images/technically_sprite_mobile.png);
 	}
 }
 
@@ -321,12 +360,7 @@ div .dark {
 	color:$white;
 }
 
-.reveal-modal h1 {
-	font-size: rem-calc(60);
-}
-
 .reveal-modal h4 {
-	font-size: rem-calc(25);
 	padding-bottom:rem-calc(20);
 }
 
@@ -434,27 +468,8 @@ input {
 }
 
 .press-logo {
-	width:400px !important;
-	height:200px !important;
 	display: inline-block !important;
 	background-repeat: no-repeat;
-}
-
-.press-logo:hover {
-	background-position:-400px;
-}
-
-#huffpo {
-	
-	background-image: url(../images/huffpo_sprite.png);
-}
-
-#vfa {
-	background-image: url(../images/vfa_sprite.png);
-}
-
-#technically {
-	background-image: url(../images/technically_sprite.png);
 }
 
 .alert-box {
