@@ -180,9 +180,6 @@ div.row {
 	#technically {
 		background-image: url(../images/technically_sprite.png);
 	}
-	input.button  {
-		width: 200px;
-	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -255,6 +252,9 @@ div.row {
 
 	#technically {
 		background-image: url(../images/technically_sprite_mobile.png);
+	}
+	input.button  {
+		width: 200px;
 	}
 }
 
