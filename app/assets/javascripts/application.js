@@ -167,6 +167,8 @@ function initialize() {
 		icon: icon,
 		title:"Area 405"
 	});
+
+	map.setOptions({'scrollwheel': false});
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
