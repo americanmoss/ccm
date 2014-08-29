@@ -483,3 +483,10 @@ input {
 	background:#EB3F34;
 	border: #EB3F34;
 }
+
+.overlay {
+	z-index: 10;
+	background: white;
+	height:360px;
+	margin:20px 0;
+}

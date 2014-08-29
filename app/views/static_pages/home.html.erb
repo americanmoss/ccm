@@ -3,7 +3,7 @@
 		<div class="splash-ingredients">
 			<%= image_tag("logo.png", class:"logo") %>
 			<div class="large-centered small-centered medium-centered large-3 medium-6 small-10 columns">
-				<a href="#ticketing" class="button light" data-reveal-id="signup-modal">GET TICKETS NOW</a>
+				<a href="#tickets" class="button light" data-reveal-id="signup-modal">GET TICKETS NOW</a>
 			</div>
 		</div>
 	</div>
@@ -43,10 +43,9 @@
 </div>
 
 <div class="row">
-<div class="large-centered large-12 columns dark text-center" id="ticketing">
+<div class="large-centered large-12 columns dark text-center" data-magellan-destination="tickets" id="tickets">
 	<%= image_tag("star_section_break.png") %>
 	<h1>Tickets</h1>
-
 	<h4>Purchase tickets now for Baltimore's first interactive food market</h4>
 	<br/>
 	<div class="large-centered large-8 columns dark text-center">
@@ -75,7 +74,7 @@
 		<div class="large-4 columns">
 			<a href="http://technical.ly/baltimore/2014/07/29/clipper-city-market-crowdfunding/" target="_blank" class="press-logo" id="technically"></a>
 		</div>
-		<div class="large-4 columns" data-magellan-destination="vendors" id="vendors">
+		<div class="large-4 columns">
 			<a href="http://ventureforamerica.org/innovation-fund-discovering-baltimores-culinary-delights/" target="_blank" class="press-logo" id="vfa"></a>
 		</div>
 	</div>
@@ -84,7 +83,7 @@
 		<div class="large-4 push-2 columns dark">
 			<a href="http://twitter.com/ClipperCityMrkt" target="_blank" class="button dark green"><i class="fi-social-twitter"></i>&nbsp;&nbsp;&nbsp;FOLLOW US ON TWITTER</a>
 		</div>
-		<div class="large-4 pull-2 columns dark">
+		<div class="large-4 pull-2 columns dark" data-magellan-destination="location" id="location">
 			<a href="http://www.facebook.com/ClipperCityMarket" target="_blank" class="button dark yellow"><i class="fi-social-facebook"></i>&nbsp;&nbsp;&nbsp;LIKE US ON FACEBOOK</a>
 		</div>
 	</div>
@@ -92,7 +91,22 @@
 </div>
 
 <div class="row">
-	<div class="large-centered large-6 columns light text-center">
+	<div class="large-centered large-12 columns text-center" style="height:400px;" data-magellan-destination="vendors" id="vendors">
+		<div id="map-canvas" style="height:400px; width:100%; position:absolute; top:0; left:0;"></div>
+		<div class="overlay large-3 push-1 columns text-center show-for-large-up">
+			<br/><br/><br/>
+			<h1>Area 405</h1>
+			<h4>405 East Oliver Street<br/>
+			Baltimore, MD<br/><br/>
+			Mt. Royal Ave. Light Rail<br/>
+			Penn Station MARC<br/>
+			Street Parking Available </h4>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-centered large-6 columns light text-center" data-magellan-destination="vendors" id="vendors">
 		<h1>Vendor Form</h1>
 		<h4>Come sell food at the market! Sign up below for more information.</h4>
 		<form action="https://docs.google.com/forms/d/1rZI8nmgq8GW9_1lpHm6ZX4T14-3eEilIjuAEYnu49Oc/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
